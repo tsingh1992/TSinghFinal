@@ -22,12 +22,14 @@ body{
 	margin: 20px auto;
 	text-align: left;
 }
+/*
 #top_header{
 	background: Red;
 	border: 1px solid blue;
-	/*set the size of the top of the page title */
+	/*set the size of the top of the page title 
 	padding: 5px;
 }
+*/
 #top_menu{
 	background: blue;
 	color:white;
@@ -38,30 +40,77 @@ body{
 	padding:5px;
 	font:bold 14px Tahoma
 }
+/*Navigation Top */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px 0px solid #e7e7e7;
+    background-color: #f3f3f3;
+	/*Fix and floting on top of page*/
+	position: fixed;
+	/*space to show top heading welcome message */
+    /*top: 13%; */
+	/*leave border on sides of page*/
+    width: 80%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+/*END: Navigation Top */
 #main_section{
 	float: left;
-	width:660px;
+	/*Responsive design using percentage of screen size*/
+	width:60%;
 	margin:30px; /* 720px, 280 left */
+	/*create space under nav bar */
+	padding-top: 30px;
 }	
 
 #about_section{
 	float:left;
 	width: 220px;
-	margin: 20px 0px;
+	/*space from top of nav*/
+	margin: 80px 0px 30px 0px;
 	padding:30px;
 	background: #66CCCC;
 }
 
 #footer{
+	/*font color*/
+	color:red;
+	/*font background color*/
+	background-color:white;
 	clear:both;
 	text-align:center;
-	padding:5px;
+	padding:0px;
 	border-top: 2px solid green;
 }
 article {
 	background: #FFFBCC;
 	border: 1px solid red;
 	padding: 20px;
+	/*space under floating nav */
+	margin-top: 25px;
 	margin-bottom: 20px;
 }
 article footer{
@@ -94,6 +143,8 @@ Button Style*/
 .btn1:hover {
   background: #3cb0fd;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Teal*/
 .btn2 {
@@ -111,6 +162,8 @@ Button Style*/
 .btn2:hover {
   background: #94ebc4;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Gold*/
 .btn3 {
@@ -128,6 +181,8 @@ Button Style*/
 .btn3:hover {
   background: #fad97f;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Salmon*/
 .btn4 {
@@ -145,6 +200,8 @@ Button Style*/
 .btn4:hover {
   background: #f7c4af;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Red */
 .btn5 {
@@ -162,6 +219,8 @@ Button Style*/
 .btn5:hover {
   background: #fa0814;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Blue*/
 .btn6 {
@@ -178,6 +237,8 @@ Button Style*/
 .btn6:hover {
   background: #2075c9;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Green*/
 .btn7 {
@@ -195,6 +256,8 @@ Button Style*/
 .btn7:hover {
   background: #20c720;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Black*/
 .btn8 {
@@ -212,6 +275,8 @@ Button Style*/
 .btn8:hover {
   background: #606160;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*Yellow*/
 .btn9 {
@@ -229,6 +294,8 @@ Button Style*/
 .btn9:hover {
   background: #ffff54;
   text-decoration: none;
+  /*add the little pointer hand on move over*/
+  cursor:pointer
 }
 /*White*/
 .btn10 {
@@ -303,6 +370,8 @@ Button Style*/
   background-image: linear-gradient(to bottom, #3cfa65, #35e65c);
   text-decoration: none;
 }
+
+
 	
 
 	

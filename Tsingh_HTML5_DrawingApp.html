@@ -1,0 +1,101 @@
+<!DOCKTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Kevin Drawing Portal</title>
+	<!--Load the JavaScript reference file in the same folder-->
+	 <script type="text/javascript" src="javascriptExternal.js"></script> 
+	<!--Load the CSS reference file in the same folder-->
+	 <link rel="stylesheet" type="text/css" href="stylesheetExternal.css">
+
+</head>
+<body> 
+	
+	<div id="bodyDivContainer">		
+		<header id="top_header">
+			<!--This will not float. adding a center align CSS attribute here 
+			<h1 style="text-align:center"> Welcome to My Drawing Portal<h1>	-->	
+		</header>
+	
+	<nav id="top_menu">
+		<ul>
+		<!--adding a center align CSS attribute here -->
+			<h1 style="color:#FA0814;text-align:center"> Welcome to My Drawing Portal<h1>	
+			<li><a href="#home" class="active">Home</a></li>
+			<!--Refresh the page if the user click on the Random drawing link -->
+			<li><a href="javascript:history.go(0)">Draw [Reset]</a>  </li>
+			<!-- Project 3 launch -->
+			<li><a href="javascript:drawOnCanvas();">Generate Random Shapes</a> </li>
+			<li><a href="#Postcards"></a>  </li>
+		<ul>
+	</nav>
+	
+	<section id="main_section">
+		<article>
+			<header >
+				<hgroup >
+					<h3 style="text-align:center">Create a Postcard</h3>
+				</hgroup>
+			</header>						
+			<!--DIV Container-->
+			<div>
+				<div id="wrapper">
+					<!-- Upload Image -->
+					</br>
+					<label for="fileUpload"><b>STEP 1:</b> Upload Image</label>
+					<input id="fileUpload" name="fileUpload" type="file" class="btnUpload"  accept="image/*" />
+					</br>
+					<!-- HTML Color Names--> 
+					<label for="Color"><b>STEP 2:</b> Choose a color </label>
+					<input id="CornflowerBlue" type="button" class="btn1" value="" onClick="FreeStyleDrawing(this)">
+					<input id="teal" type="button" class="btn2" value="" onClick="FreeStyleDrawing(this)">
+					<input id="gold" type="button" class="btn3" value="" onClick="FreeStyleDrawing(this)">
+					<input id="salmon" type="button" class="btn4" value="" onClick="FreeStyleDrawing(this)">
+					<input id="crimson"  type="button" class="btn5" value="" onClick="FreeStyleDrawing(this)">
+					<input id="darkblue" type="button" class="btn6" value="" onClick="FreeStyleDrawing(this)">
+					<input id="forestgreen" type="button" class="btn7" value="" onClick="FreeStyleDrawing(this)">
+					<input id="black" type="button" class="btn8" value="" onClick="FreeStyleDrawing(this)">
+					<input id="yellow" type="button" class="btn9" value="" onClick="FreeStyleDrawing(this)">
+					</br>
+					<label for="Color"><b>STEP 3:</b> Draw with your mouse! </label> <label for="Erase" style="margin-left:18%"><b>Erase</b> </label>
+					<input id="white" class="btn10" type ="Button" value="" onClick="FreeStyleDrawing(this)">			
+					</div>
+			   <!--Random Drawing canvas.-->
+				<div id="drawingDiv">
+				  <canvas id="drawingCanvas" width="500" height="300" style="border:dotted 2px #ff0000; margin-top:15px; background: white none repeat scroll 0 0; "></canvas>
+				</div>
+				<!-- Clear/Save buttons -->
+				<input id="Clear" type="button" class="btnClear" value="Clear" onClick="ClearCanvas(this)">
+				<input id="Save" type="button" class="btnSave" value="Save" onClick="saveButtonPress(this)">
+				</br>
+				<label for="ClearSave">Press the [C] key to Clear or [S] to Save</label>
+			</div>
+			<!--footer at the bottom of the page -->
+			<footer>
+			 <p>- created by Kevin Singh </p>
+		</footer>
+	</article>
+	</section>
+	
+	<aside id="about_section">
+		<h4> </h4>
+			<p>	<input type = "text" id = "inputUserName"  value = "Please enter your name!" size="20"  style="font-size:14px; color:#AF2E1F; text-align: left; margin-left:0px " /></br>
+			</p>
+			 <div>
+			<canvas id="textCanvas" width="200" height = "100" style="border:dotted 2px #FF0000;"></canvas>
+				<div>
+				<button onclick="showFillText();return true;">Generate Text</button>
+				<button onclick="showStrokeText();return true;">Quotes Please..</button>
+				<button onclick="Clear_text();return true;">Erase Everything</button>
+				<!--Move this to Top Nav link <input type ="Button" value="DrawRrandomShapes " onClick="drawOnCanvas()"> -->
+				</div>
+		   </div>
+	</aside>
+		
+		<footer id="footer">
+			
+			Happy Holidays :o)
+		</footer>
+	</div>
+</body>
+</html>
